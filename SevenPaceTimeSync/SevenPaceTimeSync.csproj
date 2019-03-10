@@ -106,7 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Mappings\UserTaskMapping.json" />
+    <None Include="Mappings\UserTaskMapping.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Service References\Timetracker\ConnectedService.json" />
     <None Include="Service References\Timetracker\TimetrackerProxy.ttinclude" />
