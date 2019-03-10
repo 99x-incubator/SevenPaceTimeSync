@@ -1,0 +1,14 @@
+{
+  "Users": [
+    {
+      "VstsName": "Rishanthakumar Rasarathinam",
+      "SharePointName": "RishanthakumarR"
+    }
+  ],
+  "Tasks": [
+    {
+      "VstsTask": "Development",
+      "GoodTimesTask": "CD-4"
+    }
+  ]
+}

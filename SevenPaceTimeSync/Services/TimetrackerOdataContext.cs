@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.OData.Client;
 
-namespace SevenPaceTimeSync
+namespace SevenPaceTimeSync.Services
 {
     /// <summary>
     /// oData client proxy

@@ -54,6 +54,12 @@
       <HintPath>..\packages\Microsoft.OData.Edm.6.15.0\lib\portable-net45+win+wpa81\Microsoft.OData.Edm.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePoint.Client.dll.withXML.15.0.4865.1000\lib\Microsoft.SharePoint.Client\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePoint.Client.Runtime.dll.15.0.4859.1000\lib\Microsoft.SharePoint.Client.Runtime\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Spatial, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Spatial.6.15.0\lib\portable-net45+win+wpa81\Microsoft.Spatial.dll</HintPath>
       <Private>True</Private>
@@ -85,6 +91,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\GoodTimeDataService.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserTaskMapping.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Timetracker\TimetrackerProxy.cs">
@@ -92,10 +102,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TimetrackerProxy.tt</DependentUpon>
     </Compile>
-    <Compile Include="TimetrackerOdataContext.cs" />
+    <Compile Include="Services\TimetrackerOdataContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Mappings\UserTaskMapping.json" />
     <None Include="packages.config" />
     <None Include="Service References\Timetracker\ConnectedService.json" />
     <None Include="Service References\Timetracker\TimetrackerProxy.ttinclude" />
