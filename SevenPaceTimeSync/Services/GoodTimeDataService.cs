@@ -18,7 +18,6 @@ namespace SevenPaceTimeSync.Services
             try
             {
                 ClientContext client = new ClientContext(ConfigurationManager.AppSettings.Get("SPURL"));
-                //Console.WriteLine("Total Records found for Sync: " + newTasks.Count);
                 var securePassword = new SecureString();
                 foreach (var c in ConfigurationManager.AppSettings.Get("SPPassword"))
                 {
@@ -81,7 +80,6 @@ namespace SevenPaceTimeSync.Services
                     taskCodes.Add(taskCode, taskID);
                 }
                 ClientContext client = new ClientContext(ConfigurationManager.AppSettings.Get("SPURL"));
-                //Console.WriteLine("Total Records found for Sync: " + newTasks.Count);
                 var securePassword = new SecureString();
                 foreach (var c in ConfigurationManager.AppSettings.Get("SPPassword"))
                 {
