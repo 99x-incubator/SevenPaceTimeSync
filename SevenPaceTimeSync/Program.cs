@@ -61,6 +61,15 @@ namespace SevenPaceTimeSync
                     }
                 }
             }
+            // Print out the result
+            //foreach (var row in timeExportResult)
+            //{
+            //    //Console.WriteLine("{0:g} {1} {2} {3} {4} {5}", row.RecordDate, row.UserID, row.TeamMember, row.Comment,
+            //    //    row.ActivityType, row.TimeTracked);
+            //    Console.WriteLine(CreateTaskComment(row));
+            //}
+
+
             Console.ReadKey();
         }
 

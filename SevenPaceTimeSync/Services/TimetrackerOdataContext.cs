@@ -3,11 +3,19 @@ using Microsoft.OData.Client;
 
 namespace SevenPaceTimeSync.Services
 {
+    /// <summary>
+    /// oData client proxy
+    /// Implements Timetracker authentication
+    /// </summary>
     public class TimetrackerOdataContext
     {
         private readonly Uri _serviceUri;
         private readonly string _token;
 
+        /// <summary>
+        /// On-premise context
+        /// </summary>
+        /// <param name="serviceUri"></param>
         public TimetrackerOdataContext( Uri serviceUri )
         {
             _serviceUri = serviceUri;
@@ -16,6 +24,11 @@ namespace SevenPaceTimeSync.Services
             Container.Credentials = System.Net.CredentialCache.DefaultCredentials;
         }
 
+        /// <summary>
+        /// VSTS context
+        /// </summary>
+        /// <param name="serviceUri"></param>
+        /// <param name="token"></param>
         public TimetrackerOdataContext( Uri serviceUri, string token )
         {
             _serviceUri = serviceUri;
@@ -31,6 +44,9 @@ namespace SevenPaceTimeSync.Services
             e.RequestMessage.SetHeader( "Authorization", "Bearer " + _token );
         }
 
+        /// <summary>
+        /// oData client container
+        /// </summary>
         public Default.Container Container { get; private set; }
     }
 }
