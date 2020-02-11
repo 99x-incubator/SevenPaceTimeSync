@@ -54,7 +54,7 @@ namespace SevenPaceTimeSync
                             {
                                 // TODO: Need to check about the time zone.
                                 bool result = GoodTimeDataService.AddNewLog(username, task.RecordDate.DateTime, task.TimeTracked, CreateTaskComment(task), taskCode);
-                               
+                                Console.WriteLine(result);
                             }
                            
                         }
@@ -84,7 +84,8 @@ namespace SevenPaceTimeSync
 
             }
             catch (Exception ex)
-            { 
+            {
+                Console.WriteLine("[Error][{0}] : {1}", GetMethodName(), ex.Message);
                 throw ex;
             }
 
@@ -118,6 +119,7 @@ namespace SevenPaceTimeSync
             }
             catch (Exception ex)
             {
+                Console.WriteLine("[Error][{0}] : {1}", GetMethodName(), ex.Message);
                 throw ex;
             }
 
