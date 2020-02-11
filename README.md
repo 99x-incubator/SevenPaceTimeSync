@@ -3,6 +3,23 @@
 
 A console application to sync the time data from 7Pace time tracker to GoodTimes internal time tracking tool. 
 
+## Setup
+Follow these steps to setup the project locally.
+
+1. Clone the project
+```
+$ git clone https://github.com/99xt-incubator/SevenPaceTimeSync.git
+```
+2. Install node modules
+```
+$ cd SevenPaceTimeSync
+$ npm install
+```
+3. Run local dev server
+```
+$ npm run start
+```
+
 ## Roadmap
 
 See the [open issues](https://github.com/99xt-incubator/SevenPaceTimeSync/issues) for a list of proposed features (and known issues).
